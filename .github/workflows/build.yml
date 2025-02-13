@@ -161,9 +161,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win32,win64,winarm64]
+        target: [win32,win64]
         variant: [gpl,gpl 7.1,gpl-shared,gpl-shared 7.1]
         include:
+          - target: winarm64
+            variant: gpl
           - target: linux64
             variant: gpl
           - target: linux64
@@ -235,9 +237,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [win32,win64,winarm64]
+        target: [win32,win64]
         variant: [gpl,gpl 7.1,gpl-shared,gpl-shared 7.1]
         include:
+          - target: winarm64
+            variant: gpl
           - target: linux64
             variant: gpl
           - target: linux64
